@@ -4,11 +4,8 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-input-button-unit',
   template: `
-    <p>
-      input-button-unit works!
-      The title is: {{title}}
-    </p>
-    <input [value] = "title"
+    <input #inputElementRef
+            [value] = "title"
             (keyup)="changeTitle($event.target.value)">
     <button (click)="changeTitle('Button Clicked!')">Save</button>
   `,
@@ -21,6 +18,6 @@ export class InputButtonUnitComponent implements OnInit {
   }
 changeTitle(newTitle: string) {
   this.title = newTitle;
-}
+  }
 }
 
