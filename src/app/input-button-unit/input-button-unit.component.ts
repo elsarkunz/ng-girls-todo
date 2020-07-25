@@ -4,10 +4,10 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-input-button-unit',
   template: `
-    <input #inputElementRef
+    <input class= "todo-input" #inputElementRef
             [value] = "title"
-            (keyup.enter)="submitValue($event.target.value)">
-    <button (click)="submitValue(inputElementRef.val)">Save</button>
+            (keyup.enter)="submitValue($event.target.value)" >
+    <button class="btn" (click)="submitValue(inputElementRef.val)">Save</button>
   `,
   styleUrls: ['./input-button-unit.component.css']
 })
