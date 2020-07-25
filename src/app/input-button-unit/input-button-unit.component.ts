@@ -6,8 +6,8 @@ import { Title } from '@angular/platform-browser';
   template: `
     <input #inputElementRef
             [value] = "title"
-            (keyup)="changeTitle($event.target.value)">
-    <button (click)="changeTitle('Button Clicked!')">Save</button>
+            (keyup)="changeTitle(inputElementRef)">
+    <button (click)="changeTitle(inputElementRef)">Save</button>
   `,
   styleUrls: ['./input-button-unit.component.css']
 })
