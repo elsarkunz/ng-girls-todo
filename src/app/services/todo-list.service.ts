@@ -14,7 +14,9 @@ const defaultTodoList = [
 ];
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
   export class TodoListService {
   todoList: TodoItem[];
 
